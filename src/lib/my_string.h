@@ -22,7 +22,7 @@ MyString my_copy_string(const MyString *string_to_copy);
 int my_append_literal(MyString *string, char *string_to_append);
 int my_append_custom_literal(MyString *string, char *string_to_append, const size_t bytes_to_append);
 int my_append_character(MyString *string, char character_to_append);
-int my_compare_strings(MyString *string1, MyString *string2);
+int my_compare_strings(MyString *string1, const MyString *string2);
 int my_compare_literals(const char *literal1, const char *literal2);
 int my_append_string(MyString *string, MyString *string_to_append);
 int my_insert_char(MyString *string, char character, int index);

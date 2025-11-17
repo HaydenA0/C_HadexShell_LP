@@ -2,6 +2,8 @@
 #include "lib/my_string.h"
 #include <stdlib.h>
 
+// DEEP COPYING IN APPENDING
+
 MyStringList *my_strlist_new(void)
 {
     MyStringList *list = malloc(sizeof(MyStringList));
@@ -46,4 +48,20 @@ i8 my_strlist_append_literal(MyStringList *list, const char *literal)
     my_destroy_string(&string);
 
     return MY_STRLIST_OK;
+}
+
+u8 my_strlist_is_in(const MyStringList *list, const MyString *string)
+{
+    if (list == NULL || string == NULL)
+        return 0;
+
+    for (u64 i = 0; i < list->size; i++)
+    {
+        if (my_compare_strings(&list->body[i], string))
+        {
+            return 1;
+        }
+    }
+
+    return 0;
 }

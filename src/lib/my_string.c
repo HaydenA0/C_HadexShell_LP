@@ -171,7 +171,7 @@ int my_append_character(MyString *string, char character_to_append)
     return 0;
 }
 
-int my_compare_strings(MyString *string1, MyString *string2)
+int my_compare_strings(MyString *string1, const MyString *string2)
 // 1 : string1 = string2
 {
     if (string1 == NULL || string2 == NULL || string1->string_proper == NULL || string2->string_proper == NULL)
