@@ -1,16 +1,9 @@
-// my_string.h
-#ifndef STRING_WRAPPER_H
-#define STRING_WRAPPER_H
 
-#include <stdlib.h> // ONLY malloc and realloc and of courssse free
-
-typedef struct MyString
-{
-    char *string_proper;
-    int size;
-    int capacity;
-} MyString;
-
+=== The Goal
+Create a shell for learning purposes, Especially parsing and tokenizing.\
+=== The scope of this projet
+This project leverages my library with the following api :
+```c
 int my_calculate_string_length(const char *string);
 
 MyString my_new_string(const char *string);
@@ -18,7 +11,7 @@ MyString *my_new_string_reff(const char *literal);
 
 void my_destroy_string(MyString *string);
 
-MyString my_copy_string(const MyString *string_to_copy);
+MyString my_copy_string(MyString *string_to_copy);
 int my_append_literal(MyString *string, char *string_to_append);
 int my_append_custom_literal(MyString *string, char *string_to_append, const size_t bytes_to_append);
 int my_append_character(MyString *string, char character_to_append);
@@ -46,4 +39,27 @@ int my_make_uppercase(MyString *string);
 int my_count_character(MyString *string, char character);
 MyString my_allocate_custom_size(const size_t size, const size_t capacity);
 
-#endif
+```
+
+It should be noted that I will definitely make it bigger throught this project for obvious reasons.
+I dont want to use the stdlib with anything that deals with the string with themselves. This set of conditions
+- All functions from the standard library that dont act on a char \* are allowed
+For example `printf` will be allowed because it deals with the char \* AND the io\
+strcmp will not since it just work on the char \* itself.
+
+
+=== How to learn 
+I want to learn a concept, apply it in a small self contained problem.
+Then after learning all concepts I would go back to the main problem.
+For example in shell making I we should manage child processus and all
+that so I will then work on small processus managment problems then go back. 
+#pagebreak()
+* Concepts * :
++ Reading man pages
++ Rewrite strtok
++ What a lexer/tokenizer is
++ Grammar & Parsing (Token sequences, Operator precedence, ...)
++ System Calls & Processes ( forking , execute, wait,...)
++ PATH lookup
+
+

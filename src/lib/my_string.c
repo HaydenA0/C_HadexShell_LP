@@ -67,7 +67,7 @@ void my_destroy_string(MyString *string)
     string->size = 0;
 }
 
-MyString my_copy_string(MyString *string_to_copy)
+MyString my_copy_string(const MyString *string_to_copy)
 {
     if (string_to_copy == NULL || string_to_copy->string_proper == NULL)
     {
