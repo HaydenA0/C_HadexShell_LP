@@ -11,7 +11,7 @@ MyString read_line(void)
 {
     MyString user_input = my_new_string("");
     char *buffer = NULL;
-    size_t buffer_size = 1;
+    size_t buffer_size = 0;
     getline(&buffer, &buffer_size, stdin);
     my_append_literal(&user_input, buffer);
     user_input.string_proper[user_input.size - 1] = '\0';
