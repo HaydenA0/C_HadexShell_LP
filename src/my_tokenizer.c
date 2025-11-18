@@ -83,7 +83,7 @@ MyToken *my_tok_new(const MyString *string, const TOKEN_TYPE token_type)
     token->token_type = token_type;
     return token;
 }
-MyTokenList *my_tokenize_this(const MyStringList *string_list, const MyStringList *commands)
+MyTokenList *my_tokenize(const MyStringList *string_list, const MyStringList *commands)
 {
     if (string_list == NULL || string_list->size == 0)
     {

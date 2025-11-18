@@ -21,7 +21,7 @@ int main(void)
         printf("$ > ");
         MyString user_input = read_line();
         MyStringList *list = my_splitter(user_input.string_proper, ' ');
-        MyTokenList *token_list = my_tokenize_this(list, builtin_commands);
+        MyTokenList *token_list = my_tokenize(list, builtin_commands);
         my_execute(token_list);
         my_destroy_string(&user_input);
         free(list);

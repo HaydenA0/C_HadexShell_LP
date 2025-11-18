@@ -31,6 +31,6 @@ MyToken *my_tok_new(const MyString *string, const TOKEN_TYPE token_type);
 MyStringList *my_splitter(const char *literal, const char delim);
 MyTokenList *my_toklist_new(void);
 u8 my_toklist_append(MyTokenList *list, const MyToken *token);
-MyTokenList *my_tokenize_this(const MyStringList *string_list, const MyStringList *commands);
+MyTokenList *my_tokenize(const MyStringList *string_list, const MyStringList *commands);
 
 #endif
