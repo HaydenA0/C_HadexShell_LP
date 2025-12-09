@@ -25,7 +25,7 @@ u8 my_builtin_execute(MyString *command, MyStringList *args)
     {
         if (args->size == 0)
         {
-            chdir("/home/anasr/"); // HARD CODED
+            chdir("~/"); // HARD CODED
         }
         else
         {

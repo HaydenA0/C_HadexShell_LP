@@ -25,6 +25,7 @@ int main(void)
         my_execute(token_list);
         my_destroy_string(&user_input);
         free(list);
+
         free(token_list);
     }
     free(builtin_commands);

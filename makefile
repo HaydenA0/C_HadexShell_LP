@@ -1,15 +1,15 @@
 compiler = gcc
-compiler_flags = -Wall -Wextra -ggdb -I./lib
+compiler_flags = -Wall -Wextra -ggdb -I./src/lib
 output = ./bin/hadex
 
 .PHONY: all run debug compile
 
 
-sources = *.c lib/*.c
+sources = *.c src/lib/*.c
 
 all: $(output) run
 
-$(output): $(sources)
+build: $(sources)
 	$(compiler) $(compiler_flags) $(sources) -o $(output)
 
 run: $(output)
